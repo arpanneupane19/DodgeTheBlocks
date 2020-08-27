@@ -172,7 +172,7 @@ def main():
     e_width = 100
     e_startx = random.randrange(0, displayWidth-e_width)
     e_starty = -5
-    e_speed = 12
+    e_speed = 8
 
     ''' Player block '''
     p_height = 50
