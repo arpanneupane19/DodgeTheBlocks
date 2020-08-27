@@ -9,6 +9,10 @@ import time
 import random
 
 pygame.init()
+pygame.mixer.init()
+default = pygame.mixer.music.load('HumbleMatch.ogg')
+
+
 
 ''' Setting up the window '''
 displayWidth = 800
@@ -28,6 +32,9 @@ red = (128,0,0)
 
 bright_yellow = (200,200,0)
 yellow = (128,128,0)
+
+bright_blue = (0,0,255)
+blue = (0,0,128)
 
 font = pygame.font.SysFont('agencyfb', 40, bold=True)
 crash_sound = pygame.mixer.Sound('sfx_hit.wav')
@@ -74,7 +81,44 @@ def pause():
         win.blit(pause_game_exit, (290, 500))
         pygame.display.update()
         clock.tick(15)
-            
+
+
+def song1():
+    pygame.mixer.music.load('HumbleMatch.ogg')
+    pygame.mixer.music.play(-1)
+
+def song2():
+    pygame.mixer.music.load('Chiptronical.ogg')
+    pygame.mixer.music.play(-1)
+
+
+def music():
+    global default
+    black = (0,0,0)
+    white = (255,255,255)
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    main()
+                if event.key == pygame.K_q:
+                    sys.exit()
+
+
+        win.fill(black)
+        select_music_text = pygame.font.SysFont("agencyfb", 60, bold=True)
+        music_text = select_music_text.render("Select Music", True, white)
+        win.blit(music_text,(250, 200))
+        buttons("Song 1", 150,300,150,50, red, bright_red, song1)
+        buttons("Song 2", 500,300,150,50, blue, bright_blue, song2)
+        buttons("Back", 10,10,150,50, yellow, bright_yellow, main_menu)
+        pygame.display.update()
+
+        
+    
 
 def main_menu():
     black = (0,0,0)
@@ -97,7 +141,8 @@ def main_menu():
         main_men_text_render = main_men_text.render('PRESS SPACE TO PLAY', True, white)
         win.blit(main_men_text_render,(100, 300))
         win.blit(main_men_text_welcome,(50, 200))
-        buttons("Help?", 325,450,150,50, yellow, bright_yellow, help)
+        buttons("Help?", 150,450,150,50, yellow, bright_yellow, help)
+        buttons("Music", 500,450,150,50, blue, bright_blue, music)
         pygame.display.update()
 
 
