@@ -19,7 +19,7 @@ File Structure:
 
 1. DodgeTheBlocks.py - Contains the main game.
 2. sfx_hit.wav - Contains the sound of the player colliding with other objects.
-
+3. song1.wav and song2.wav - Contain the background music.
 
 
 Installing PyGame:
