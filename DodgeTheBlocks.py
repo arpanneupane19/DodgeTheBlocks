@@ -12,7 +12,6 @@ pygame.init()
 pygame.mixer.init()
 
 
-
 ''' Setting up the window '''
 displayWidth = 800
 displayHeight = 600
@@ -83,16 +82,18 @@ def pause():
 
 
 def song1():
-    pygame.mixer.music.load('HumbleMatch.wav')
+    pygame.mixer.music.load('song1.mp3')
     pygame.mixer.music.play(-1)
 
 def song2():
-    pygame.mixer.music.load('Chiptronical.wav')
+    pygame.mixer.music.load('song2.mp3')
     pygame.mixer.music.play(-1)
 
+def off():
+    pygame.mixer.music.stop()
+    
 
 def music():
-    global default
     black = (0,0,0)
     white = (255,255,255)
 
@@ -111,8 +112,9 @@ def music():
         select_music_text = pygame.font.SysFont("agencyfb", 60, bold=True)
         music_text = select_music_text.render("Select Music", True, white)
         win.blit(music_text,(250, 200))
-        buttons("Song 1", 150,300,150,50, red, bright_red, song1)
+        buttons("Song 1", 150,300,150,50, green, bright_green, song1)
         buttons("Song 2", 500,300,150,50, blue, bright_blue, song2)
+        buttons("Off", 325,300,150,50, red, bright_red, off)
         buttons("Back", 10,10,150,50, yellow, bright_yellow, main_menu)
         pygame.display.update()
 
