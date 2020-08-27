@@ -10,7 +10,6 @@ import random
 
 pygame.init()
 pygame.mixer.init()
-default = pygame.mixer.music.load('HumbleMatch.ogg')
 
 
 
@@ -84,11 +83,11 @@ def pause():
 
 
 def song1():
-    pygame.mixer.music.load('HumbleMatch.ogg')
+    pygame.mixer.music.load('HumbleMatch.wav')
     pygame.mixer.music.play(-1)
 
 def song2():
-    pygame.mixer.music.load('Chiptronical.ogg')
+    pygame.mixer.music.load('Chiptronical.wav')
     pygame.mixer.music.play(-1)
 
 
