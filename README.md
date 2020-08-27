@@ -11,6 +11,7 @@ Navigation menu.
 1. Collision between player block and enemy block.
 2. Collision between player block and wall.
 3. Recording the score.
+4. Option to select background music or turn it off.
 
 
 
