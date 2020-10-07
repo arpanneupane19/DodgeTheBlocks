@@ -1,11 +1,11 @@
-Built With:
+## Built With:
 
-Python 3.7.9
-Pygame - 2D graphics library
+# Python 3.7.9
+# Pygame - 2D graphics library
 
 
 
-Features:
+## Features:
 
 Navigation menu.
 1. Collision between player block and enemy block.
@@ -15,7 +15,7 @@ Navigation menu.
 
 
 
-File Structure:
+## File Structure:
 
 1. DodgeTheBlocks.py - Contains the main game.
 2. sfx_hit.wav - Contains the sound of the player colliding with other objects.
@@ -24,13 +24,18 @@ File Structure:
 
 Installing PyGame:
 
-1. Windows - pip install pygame
-2. macOS - pip3 install pygame
-3. Ubuntu/Debian - sudo apt-get install python3-pygame
+1. Windows -```bash 
+pip install pygame
+```
+2. macOS - ```bash
+pip3 install pygame
+```
+3. Ubuntu/Debian - ```bash
+sudo apt-get install python3-pygame```
 
 
 
-Playing the game:
+## Playing the game:
 
 The goal in the game is for you to dodge the red block that falls from the top of the screen.
 The more times you dodge it, the faster the block gets but your speed also increases whenever your
