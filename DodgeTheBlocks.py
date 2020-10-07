@@ -82,11 +82,11 @@ def pause():
 
 
 def song1():
-    pygame.mixer.music.load('song1.mp3')
+    pygame.mixer.music.load('song1.wav')
     pygame.mixer.music.play(-1)
 
 def song2():
-    pygame.mixer.music.load('song2.mp3')
+    pygame.mixer.music.load('song2.wav')
     pygame.mixer.music.play(-1)
 
 def off():
