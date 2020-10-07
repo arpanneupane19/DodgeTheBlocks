@@ -1,7 +1,9 @@
+DodgeTheBlocks
+
 ## Built With:
 
-# Python 3.7.9
-# Pygame - 2D graphics library
+Python 3.7.9
+Pygame - 2D graphics library
 
 
 
@@ -24,14 +26,19 @@ Navigation menu.
 
 Installing PyGame:
 
-1. Windows -```bash 
+1. Windows -
+```bash 
 pip install pygame
 ```
-2. macOS - ```bash
+2. macOS - 
+```bash
 pip3 install pygame
 ```
-3. Ubuntu/Debian - ```bash
-sudo apt-get install python3-pygame```
+
+3.Ubuntu/Debian - 
+```bash
+sudo apt-get python3-pygame
+```
 
 
 
